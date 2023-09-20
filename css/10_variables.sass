@@ -1,0 +1,28 @@
+$primary: var(--primary)
+$secondary: var(--secondary)
+$opacity: 0.5
+
+$s1: .0625rem
+$s2: .125rem
+$s3: .1875rem
+$s4: .25rem
+$s6: .375rem
+$s8: .5rem
+$s12: .75rem
+$s16: 1rem
+$s18: 1.125rem
+$s20: 1.25rem
+$s24: 1.5rem
+$s32: 2rem
+$s40: 2.5rem
+$s48: 3rem
+$s56: 3.5rem
+$s64: 4rem
+
+@mixin dotted
+    $dotSize: $s2
+    $bgSize: $s12
+    $bgPosition: calc(#{$bgSize} / 2)
+    background-image: radial-gradient(circle at center, $primary $dotSize, transparent 0), radial-gradient(circle at center, $primary $dotSize, transparent 0)
+    background-size: $bgSize $bgSize
+    background-position: 0 0, $bgPosition $bgPosition

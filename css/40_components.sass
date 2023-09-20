@@ -1,0 +1,52 @@
+.cookies
+  display: none
+
+.cookiesModal
+  z-index: 3
+  width: 100%
+  background-color: $primary
+  color: $secondary
+  display: flex
+  flex-direction: column
+  gap: $s12
+  padding: $s16
+
+.cookiesActions
+  display: flex
+  text-align: center
+  a, .cookiesAcceptButton
+    display: block
+    width: 100%
+    outline: $s2 solid $secondary
+    outline-offset: calc(-#{$s2} / 2)
+    padding: $s8 $s16
+    &:hover
+      background-color: $secondary
+      color: $primary
+      cursor: pointer
+
+@media screen and (min-width: 570px)
+  .cookiesModal
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: space-between
+  .cookiesActions
+    a, .cookiesAcceptButton
+      width: auto
+
+@media screen and (min-width: 768px)
+  .cookiesModal
+    padding: $s16 $s24
+  .cookiesActions
+    a, .cookiesAcceptButton
+      outline: $s3 solid $secondary
+      outline-offset: calc(-#{$s3} / 2)
+      padding: $s12 $s24
+
+@media screen and (min-width: 1024px)
+  .cookiesModal
+    padding: $s24 $s32
+  .cookiesActions
+    a, .cookiesAcceptButton
+      padding: $s12 $s32

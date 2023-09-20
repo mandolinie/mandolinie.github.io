@@ -1,0 +1,146 @@
+*, html
+  box-sizing: border-box
+
+html
+  height: 100vh
+  scroll-behavior: smooth
+
+body
+  min-width: 320px
+  min-height: 100vh
+  background: $secondary
+  padding: $s16
+  display: flex
+  flex-direction: column
+  gap: $s16
+  @include dotted
+  max-width: 1440px
+  margin: 0 auto
+
+// Header
+
+header
+  display: grid
+  justify-content: space-between
+  row-gap: $s16
+  grid-template-areas: "logo contact" "menu menu"
+
+.logo
+  grid-area: logo
+  justify-self: start
+
+.contact
+  grid-area: contact
+  justify-self: end
+
+.menu
+  grid-area: menu
+  display: flex
+  flex-direction: column
+
+.menu-item, .info a
+  width: 100%
+
+.logo a, .menu-item, .dropdown a, .contact a, main, .copyright, .info a
+  display: block
+  outline: $s2 solid $primary
+  outline-offset: calc(-#{$s2} / 2)
+  padding: $s8 $s16
+  background-color: $secondary
+  box-shadow: $s6 $s6 0 0 $primary
+
+.logo a, .menu-item, .dropdown a, .contact a, .info a
+  &:hover
+    background-color: $primary
+    color: $secondary
+    cursor: pointer
+
+.menu-item
+  position: relative
+
+.menu-item.open
+  background-color: $primary
+  color: $secondary
+
+.dropdown
+  z-index: 1
+  position: absolute
+  top: 0
+  left: 100%
+  transform: translateX(-100%)
+  min-width: 50%
+  background-color: $secondary
+  display: flex
+  flex-direction: column
+  visibility: hidden
+  pointer-events: none
+
+.dropdown.show
+  background-color: $secondary
+  color: $primary
+  visibility: visible
+  pointer-events: auto
+
+// Main content
+
+main
+  grid-area: main
+  padding: $s16
+  flex: 1
+
+// Footer
+
+footer
+  display: grid
+  row-gap: $s16
+  grid-template-areas: "info" "copyright"
+
+.copyright
+  grid-area: copyright
+
+.info
+  display: flex
+  grid-area: info
+
+@media screen and (min-width: 480px)
+  .menu
+    flex-direction: row
+  .dropdown
+    position: absolute
+    top: 100%
+    left: 0
+    transform: translateX(0)
+    min-width: 100%
+  main
+    padding: $s16
+
+@media screen and (min-width: 768px)
+  header
+    grid-template-areas: "logo menu contact"
+  .menu-item, .info a
+    width: auto
+  body
+    padding: $s24
+    gap: $s24
+  .logo a, .menu-item, .dropdown a, .contact a, main, .copyright, .info a
+    outline: $s3 solid $primary
+    outline-offset: calc(-#{$s3} / 2)
+    padding: $s12 $s24
+    box-shadow: $s8 $s8 0 0 $primary
+  main
+    padding: $s24
+  footer
+    grid-template-areas: "copyright info"
+    justify-content: space-between
+
+@media screen and (min-width: 1024px)
+  body
+    padding: $s32
+    gap: $s32
+  .menu-item
+    width: 190px
+  .logo a, .menu-item, .dropdown a, .contact a, main, .copyright, .info a
+    padding: $s12 $s32
+    box-shadow: $s12 $s12 0 0 $primary
+  main
+    padding: $s32
