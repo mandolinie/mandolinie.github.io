@@ -61,6 +61,12 @@ document.addEventListener('DOMContentLoaded', function () {
     --secondary: ${color2};
   }`;
 
+  // Update the theme-color meta tag with the primary color
+  const themeColorMetaTag = document.querySelector('meta[name="theme-color"]');
+  if (themeColorMetaTag) {
+    themeColorMetaTag.setAttribute('content', color1);
+  }
+
   document.head.appendChild(styleElement);
 
 });
