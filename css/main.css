@@ -40,7 +40,7 @@ h5, legend { font-size: 1rem; }
 
 h6, figcaption { font-size: 0.75rem; }
 
-p, ul li { font-weight: 500; padding: 0 0 0.75rem 0; }
+p, ul li { font-weight: 500; padding: 0 0 0.75rem 0; word-wrap: break-word; }
 
 p a, ul li a { color: inherit; text-decoration: underline; }
 
