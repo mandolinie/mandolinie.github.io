@@ -118,4 +118,4 @@ footer { display: grid; row-gap: 1rem; grid-template-areas: "info" "copyright"; 
 
 @media screen and (min-width: 768px) { .cookiesModal { padding: 1rem 1.5rem; } .cookiesActions a, .cookiesActions .cookiesAcceptButton { outline: 0.1875rem solid var(--secondary); outline-offset: calc(-0.1875rem / 2); padding: 0.75rem 1.5rem; } }
 
-@media screen and (min-width: 1024px) { .cookiesModal { padding: 1.5rem 2rem; } .cookiesActions a, .cookiesActions .cookiesAcceptButton { padding: 0.75rem 2rem; } }
+@media screen and (min-width: 1024px) { .cookiesModal { padding: 1.25rem 2rem; } .cookiesActions a, .cookiesActions .cookiesAcceptButton { padding: 0.75rem 2rem; } }
