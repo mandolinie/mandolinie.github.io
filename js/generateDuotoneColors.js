@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   // Specify your contrast ratio (e.g., 4.5:1 for WCAG AA)
-  const contrastRatio = 4.5;
+  const contrastRatio = 10;
 
   // Call the function to generate duotone colors with the specified contrast ratio
   const [color1, color2] = generateDuotoneColors(contrastRatio);
