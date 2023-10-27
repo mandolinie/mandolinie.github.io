@@ -86,7 +86,13 @@ header
 main
   grid-area: main
   padding: $s16
+  gap: $s16
   flex: 1
+
+.col
+  display: flex
+  flex-direction: column
+  justify-content: space-between
 
 // Footer
 
@@ -111,8 +117,6 @@ footer
     left: 0
     transform: translateX(0)
     min-width: 100%
-  main
-    padding: $s16
 
 @media screen and (min-width: 768px)
   header
@@ -129,6 +133,7 @@ footer
     box-shadow: $s8 $s8 0 0 $primary
   main
     padding: $s24
+    gap: $s24
   footer
     grid-template-areas: "copyright info"
     justify-content: space-between
@@ -144,3 +149,4 @@ footer
     box-shadow: $s12 $s12 0 0 $primary
   main
     padding: $s32
+    gap: $s32
