@@ -90,6 +90,12 @@ header { display: grid; justify-content: space-between; row-gap: 1rem; grid-temp
 
 .dropdown { z-index: 1; position: absolute; top: 0; left: 100%; transform: translateX(-100%); min-width: 50%; background-color: var(--secondary); display: flex; flex-direction: column; visibility: hidden; pointer-events: none; }
 
+.dropdown a { display: flex; align-items: center; gap: 0.375rem; }
+
+.dropdown a span { font-size: 0.75rem; text-transform: uppercase; background-color: var(--primary); color: var(--secondary); padding: 0.125rem 0.375rem; }
+
+.dropdown a:hover span { background-color: var(--secondary); color: var(--primary); }
+
 .dropdown.show { background-color: var(--secondary); color: var(--primary); visibility: visible; pointer-events: auto; }
 
 main { grid-area: main; padding: 1rem; gap: 1rem; flex: 1; }
