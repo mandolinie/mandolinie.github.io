@@ -39,10 +39,6 @@ table {
 }
 
 @font-face {
-  font-family: "Inter Variable";
-  src: local("Inter Variable"), url("../fonts/Inter-var.woff2") format("woff2");
-}
-@font-face {
   font-family: "Satoshi Variable";
   src: local("Satoshi Variable"), url("../fonts/Satoshi-Variable.woff2") format("woff2");
   font-weight: 1 999;
