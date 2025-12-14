@@ -19,15 +19,6 @@
     <meta name="og:image:type" content="image/png">
     <meta name="og:image:width" content="512">
     <meta name="og:image:height" content="512">
-    <!-- Google tag (gtag.js)-->
-    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-TVSZZ0L8KV"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-TVSZZ0L8KV');
-      
-    </script>
     <!-- Favicon-->
     <link rel="icon" type="image/png" href="../img/favicon/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/svg+xml" href="../img/favicon/favicon.svg">
@@ -37,10 +28,12 @@
     <link rel="manifest" href="../img/favicon/site.webmanifest">
   </head>
   <body>
-    <div class="cookies">
-      <div class="cookiesModal">This site collects anonymized usage data. 
-        <div class="cookiesActions">
-          <div class="cookiesAcceptButton">OK</div><a href="/privacy">Read more</a>
+    <div id="cookies">
+      <div id="cookiesModal">
+        <p>This page collects anonymized usage data. Read more under <a href="privacy">privacy</a>.</p>
+        <div id="cookiesActions">
+          <div id="cookiesAcceptButton">Accept</div>
+          <div id="cookiesDeclineButton">Decline</div>
         </div>
       </div>
     </div>

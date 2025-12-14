@@ -45,22 +45,49 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Cookies
 document.addEventListener('DOMContentLoaded', function () {
-    const cookies = document.querySelectorAll('.cookies');
-    const cookiesAcceptButton = document.querySelectorAll('.cookiesAcceptButton');
-    const cookieAccepted = sessionStorage.getItem('Manuel Blex Cookies');
-  
-    if (!cookieAccepted) {
-      cookies.forEach(function (banner) {
-        banner.style.display = 'block';
-      });
+  const cookiesBanner = document.getElementById('cookies');
+  const acceptButton = document.getElementById('cookiesAcceptButton');
+  const declineButton = document.getElementById('cookiesDeclineButton');
+
+  // Always check localStorage
+  const cookieDecision = localStorage.getItem('Mandolinie Cookies');
+
+  if (!cookieDecision) {
+    cookiesBanner.style.display = 'block';
+  } else {
+    cookiesBanner.style.display = 'none';
+    if (cookieDecision === 'accepted') {
+      loadGoogleAnalytics();
     }
-  
-    cookiesAcceptButton.forEach(function (button) {
-      button.addEventListener('click', function () {
-        sessionStorage.setItem('Manuel Blex Cookies', 'accepted');
-        cookies.forEach(function (modal) {
-            modal.style.display = 'none';
-        });
-      });
-    });
-  });  
+  }
+
+  // Accept button
+  acceptButton.addEventListener('click', function () {
+    localStorage.setItem('Mandolinie Cookies', 'accepted');
+    cookiesBanner.style.display = 'none';
+    loadGoogleAnalytics();
+  });
+
+  // Decline button
+  declineButton.addEventListener('click', function () {
+    localStorage.setItem('Mandolinie Cookies', 'declined');
+    cookiesBanner.style.display = 'none';
+  });
+
+  function loadGoogleAnalytics() {
+    if (window.gtagLoaded) return; // prevent double-loading
+    window.gtagLoaded = true;
+
+    const script = document.createElement('script');
+    script.src = "https://www.googletagmanager.com/gtag/js?id=G-TVSZZ0L8KV";
+    script.async = true;
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    window.gtag = gtag;
+
+    gtag('js', new Date());
+    gtag('config', 'G-TVSZZ0L8KV', { anonymize_ip: true });
+  }
+});

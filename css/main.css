@@ -456,11 +456,11 @@ footer {
     gap: 2rem;
   }
 }
-.cookies {
+#cookies {
   display: none;
 }
 
-.cookiesModal {
+#cookiesModal {
   z-index: 3;
   width: 100%;
   background-color: var(--primary);
@@ -475,28 +475,39 @@ footer {
   gap: 0.75rem;
   padding: 1rem;
 }
+#cookiesModal p {
+  padding: 0;
+}
+#cookiesModal a {
+  display: inline;
+}
+#cookiesModal a:hover {
+  background-color: var(--secondary);
+  outline: 0.125rem solid var(--secondary);
+  color: var(--primary);
+}
 
-.cookiesActions {
+#cookiesActions {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
 }
-.cookiesActions a, .cookiesActions .cookiesAcceptButton {
+#cookiesActions #cookiesAcceptButton, #cookiesActions #cookiesDeclineButton {
   display: block;
   width: 100%;
   outline: 0.125rem solid var(--secondary);
   outline-offset: calc(-0.125rem / 2);
   padding: 0.5rem 1rem;
 }
-.cookiesActions a:hover, .cookiesActions .cookiesAcceptButton:hover {
+#cookiesActions #cookiesAcceptButton:hover, #cookiesActions #cookiesDeclineButton:hover {
   background-color: var(--secondary);
   color: var(--primary);
   cursor: pointer;
 }
 
 @media screen and (min-width: 570px) {
-  .cookiesModal {
+  #cookiesModal {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -511,25 +522,25 @@ footer {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .cookiesActions a, .cookiesActions .cookiesAcceptButton {
+  #cookiesActions #cookiesAcceptButton, #cookiesActions #cookiesDeclineButton {
     width: auto;
   }
 }
 @media screen and (min-width: 768px) {
-  .cookiesModal {
+  #cookiesModal {
     padding: 1rem 1.5rem;
   }
-  .cookiesActions a, .cookiesActions .cookiesAcceptButton {
+  #cookiesActions #cookiesAcceptButton, #cookiesActions #cookiesDeclineButton {
     outline: 0.1875rem solid var(--secondary);
     outline-offset: calc(-0.1875rem / 2);
     padding: 0.75rem 1.5rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  .cookiesModal {
+  #cookiesModal {
     padding: 1.25rem 2rem;
   }
-  .cookiesActions a, .cookiesActions .cookiesAcceptButton {
+  #cookiesActions #cookiesAcceptButton, #cookiesActions #cookiesDeclineButton {
     padding: 0.75rem 2rem;
   }
 }

@@ -1,7 +1,7 @@
-.cookies
+#cookies
   display: none
 
-.cookiesModal
+#cookiesModal
   z-index: 3
   width: 100%
   background-color: $primary
@@ -10,11 +10,20 @@
   flex-direction: column
   gap: $s12
   padding: $s16
+  p
+    padding: 0
+  a
+    display: inline
+    &:hover
+      background-color: $secondary
+      outline: $s2 solid $secondary
+      color: $primary
 
-.cookiesActions
+
+#cookiesActions
   display: flex
   text-align: center
-  a, .cookiesAcceptButton
+  #cookiesAcceptButton, #cookiesDeclineButton
     display: block
     width: 100%
     outline: $s2 solid $secondary
@@ -26,27 +35,27 @@
       cursor: pointer
 
 @media screen and (min-width: 570px)
-  .cookiesModal
+  #cookiesModal
     display: flex
     flex-direction: row
     align-items: center
     justify-content: space-between
-  .cookiesActions
-    a, .cookiesAcceptButton
+  #cookiesActions
+    #cookiesAcceptButton, #cookiesDeclineButton
       width: auto
 
 @media screen and (min-width: 768px)
-  .cookiesModal
+  #cookiesModal
     padding: $s16 $s24
-  .cookiesActions
-    a, .cookiesAcceptButton
+  #cookiesActions
+    #cookiesAcceptButton, #cookiesDeclineButton
       outline: $s3 solid $secondary
       outline-offset: calc(-#{$s3} / 2)
       padding: $s12 $s24
 
 @media screen and (min-width: 1024px)
-  .cookiesModal
+  #cookiesModal
     padding: $s20 $s32
-  .cookiesActions
-    a, .cookiesAcceptButton
+  #cookiesActions
+    #cookiesAcceptButton, #cookiesDeclineButton
       padding: $s12 $s32
