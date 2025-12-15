@@ -91,3 +91,6 @@ document.addEventListener('DOMContentLoaded', function () {
     gtag('config', 'G-TVSZZ0L8KV', { anonymize_ip: true });
   }
 });
+
+// Copyright year
+document.getElementById('year').textContent = new Date().getFullYear();

@@ -1,19 +1,22 @@
 *, html
 	box-sizing: border-box
+	&:focus
+		outline: $s2 solid white
+		outline-offset: $s2
 
 html
 	height: 100vh
 	scroll-behavior: smooth
-
+	background: $secondary
+	@include dotted
+	
 body
 	min-width: 320px
 	min-height: 100vh
-	background: $secondary
 	padding: $s16 $s20 $s20 $s16
 	display: flex
 	flex-direction: column
 	gap: $s16
-	@include dotted
 	max-width: 1440px
 	margin: 0 auto
 
