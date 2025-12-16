@@ -1,61 +1,49 @@
 #cookies
   display: none
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  background-color: rgba(black, .5)
+  z-index: 3
 
 #cookiesModal
-  z-index: 3
-  width: 100%
-  background-color: $primary
-  color: $secondary
+  position: absolute
+  bottom: 0
+  left: 50%
+  transform: translateX(-50%)
+  @include boxSmall
   display: flex
   flex-direction: column
-  gap: $s12
-  padding: $s16
+  padding: $s24 $s32 $s32
+  gap: $s24
+  width: 100%
+  max-width: 560px
   p
     padding: 0
   a
     display: inline
-    &:hover
+    &:hover, &:focus-visible
       background-color: $secondary
       outline: $s2 solid $secondary
       color: $primary
 
-
 #cookiesActions
   display: flex
-  text-align: center
-  #cookiesAcceptButton, #cookiesDeclineButton
-    display: block
+  flex-direction: column
+  button
     width: 100%
-    outline: $s2 solid $secondary
-    outline-offset: calc(-#{$s2} / 2)
-    padding: $s8 $s16
-    &:hover
-      background-color: $secondary
-      color: $primary
-      cursor: pointer
 
-@media screen and (min-width: 570px)
-  #cookiesModal
-    display: flex
-    flex-direction: row
-    align-items: center
-    justify-content: space-between
+
+@media screen and (min-width: 560px)
   #cookiesActions
-    #cookiesAcceptButton, #cookiesDeclineButton
-      width: auto
+    flex-direction: row
 
 @media screen and (min-width: 768px)
   #cookiesModal
-    padding: $s16 $s24
-  #cookiesActions
-    #cookiesAcceptButton, #cookiesDeclineButton
-      outline: $s3 solid $secondary
-      outline-offset: calc(-#{$s3} / 2)
-      padding: $s12 $s24
+    @include boxMedium
 
 @media screen and (min-width: 1024px)
   #cookiesModal
-    padding: $s20 $s32
-  #cookiesActions
-    #cookiesAcceptButton, #cookiesDeclineButton
-      padding: $s12 $s32
+    @include boxLarge

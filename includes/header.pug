@@ -1,26 +1,35 @@
 header
-  .logo
-    <a href="/">Manuel Blex</a>
+  a.logo(href="/" aria-label="Logo") Manuel Blex
 
-  .menu
-    .menu-item Work
-      .dropdown
-        <a href="https://de.linkedin.com/in/manuel-blex" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a href="https://www.xing.com/profile/manuel_blex" target="_blank" rel="noopener noreferrer">XING</a>
-        <a href="https://be.net/manuelblex" target="_blank" rel="noopener noreferrer">Portfolio</a>
-    .menu-item Music
-      .dropdown
-        <a href="https://www.cngrts.com" target="_blank" rel="noopener noreferrer">CNGRTS</a>
-        <a href="https://soundcloud.com/per-pedes" target="_blank" rel="noopener noreferrer">Per Pedes</a>
-        <a href="https://soundcloud.com/myheartbits" target="_blank" rel="noopener noreferrer">myheartbits</a>
-    .menu-item Design/Code
-      .dropdown
-        <a href="https://mandolinie.creator-spring.com/" target="_blank" rel="noopener noreferrer">Shop <span>New!</span></a>
-        <a href="https://medium.com/@manuelblex" target="_blank" rel="noopener noreferrer">Medium</a>
-        <a href="https://dribbble.com/Mandolinie" target="_blank" rel="noopener noreferrer">Dribbble</a>
-        <a href="https://codepen.io/mandolinie" target="_blank" rel="noopeer noreferrer">CodePen</a>
-        <a href="https://github.com/mandolinie" target="_blank" rel="noopener noreferrer">GitHub</a>
+  nav(aria-label="Main navigation")
+    .menu(role="menubar")
 
+      .menu-item
+        button.menu-button(aria-haspopup="true" aria-expanded="false") Work
+        .dropdown(role="menu")
+          a(role="menuitem" href="https://de.linkedin.com/in/manuel-blex" target="_blank" rel="noopener noreferrer") LinkedIn
+          a(role="menuitem" href="https://www.xing.com/profile/manuel_blex" target="_blank" rel="noopener noreferrer") XING
+          a(role="menuitem" href="https://be.net/manuelblex" target="_blank" rel="noopener noreferrer") Portfolio
 
-  .contact
-    <a href="mailto:mandolinie@proton.me?subject=Contact from mandolinie.github.io">Contact</a>
+      .menu-item
+        button.menu-button(aria-haspopup="true" aria-expanded="false") Music
+        .dropdown(role="menu")
+          a(role="menuitem" href="https://www.cngrts.com" target="_blank" rel="noopener noreferrer") CNGRTS
+          a(role="menuitem" href="https://soundcloud.com/per-pedes" target="_blank" rel="noopener noreferrer") Per Pedes
+          a(role="menuitem" href="https://soundcloud.com/myheartbits" target="_blank" rel="noopener noreferrer") myheartbits
+
+      .menu-item
+        button.menu-button(aria-haspopup="true" aria-expanded="false") Creative
+        .dropdown(role="menu")
+          a(role="menuitem" href="https://mandolinie.creator-spring.com/" target="_blank" rel="noopener noreferrer") Shop <span>New!</span>
+          a(role="menuitem" href="https://medium.com/@manuelblex" target="_blank" rel="noopener noreferrer") Medium
+          a(role="menuitem" href="https://dribbble.com/Mandolinie" target="_blank" rel="noopener noreferrer") Dribbble
+          a(role="menuitem" href="https://codepen.io/mandolinie" target="_blank" rel="noopener noreferrer") CodePen
+          a(role="menuitem" href="https://github.com/mandolinie" target="_blank" rel="noopener noreferrer") GitHub
+
+      .menu-item
+        button.menu-button(aria-haspopup="true" aria-expanded="false") Projects
+        .dropdown(role="menu")
+          a(role="menuitem" href="https://mandolinie.github.io/tabsonfire" target="_blank" rel="noopener noreferrer") TabsOnFire
+
+  a.contact(href="mailto:mandolinie@proton.me?subject=Contact from mandolinie.github.io") Contact

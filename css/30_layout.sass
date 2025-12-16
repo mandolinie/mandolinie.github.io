@@ -1,15 +1,12 @@
-*, html
+*, *::before, *::after
 	box-sizing: border-box
-	&:focus
-		outline: $s2 solid white
-		outline-offset: $s2
 
 html
 	height: 100vh
 	scroll-behavior: smooth
 	background: $secondary
 	@include dotted
-	
+
 body
 	min-width: 320px
 	min-height: 100vh
@@ -24,7 +21,6 @@ body
 
 header
 	display: grid
-	justify-content: space-between
 	row-gap: $s16
 	grid-template-areas: "logo contact" "menu menu"
 
@@ -36,47 +32,47 @@ header
 	grid-area: contact
 	justify-self: end
 
-.menu
+nav
 	grid-area: menu
-	display: flex
-	flex-direction: column
+	.menu
+		display: flex
+		flex-direction: column
 
-.menu-item, .info a
+.menu-item
+	width: 100%
+	position: relative
+
+.menu-button
 	width: 100%
 
-.logo a, .menu-item, .dropdown a, .contact a, main, .copyright, .info a
+%interactive
+	appearance: none
+	border: none
 	display: block
-	outline: $s2 solid $primary
-	outline-offset: calc(-#{$s2} / 2)
 	padding: $s8 $s16
-	background-color: $secondary
-	box-shadow: $s6 $s6 0 0 $primary
-
-.logo a, .menu-item, .dropdown a, .contact a, .info a
-	&:hover
+	@include boxSmall
+	font: inherit
+	color: inherit
+	text-decoration: none
+	text-align: left
+	cursor: pointer
+	&:hover, &:focus-visible
 		background-color: $primary
 		color: $secondary
 		cursor: pointer
 
-.menu-item
-	position: relative
-
-.menu-item.open
+.menu-button[aria-expanded="true"]
 	background-color: $primary
 	color: $secondary
 
 .dropdown
-	z-index: 1
+	display: none
 	position: absolute
 	top: 0
 	left: 100%
 	transform: translateX(-100%)
 	min-width: 50%
-	background-color: $secondary
-	display: flex
-	flex-direction: column
-	visibility: hidden
-	pointer-events: none
+	z-index: 2
 	a
 		display: flex
 		align-items: center
@@ -88,14 +84,11 @@ header
 			color: $secondary
 			padding: $s2 $s6
 		&:hover span
-				background-color: $secondary
-				color: $primary
-
-.dropdown.show
-	background-color: $secondary
-	color: $primary
-	visibility: visible
-	pointer-events: auto
+			background-color: $secondary
+			color: $primary
+	&.show
+		display: flex
+		flex-direction: column
 
 // Main content
 
@@ -104,6 +97,7 @@ main
 	padding: $s16
 	gap: $s16
 	flex: 1
+	@include boxSmall
 
 .col
 	display: flex
@@ -124,32 +118,34 @@ footer
 	display: flex
 	grid-area: info
 
-@media screen and (min-width: 480px)
-	.menu
-		flex-direction: row
-	.dropdown
-		position: absolute
-		top: 100%
-		left: 0
-		transform: translateX(0)
-		min-width: 100%
+.info a
+	width: 100%
+
+@media screen and (min-width: 560px)
+	nav
+		.menu
+			flex-direction: row
+		.dropdown
+			position: absolute
+			top: 100%
+			left: 0
+			transform: translateX(0)
+			min-width: 100%
 
 @media screen and (min-width: 768px)
 	header
 		grid-template-areas: "logo menu contact"
+		justify-content: space-between
 	.menu-item, .info a
 		width: auto
 	body
 		padding: $s24
 		gap: $s24
-	.logo a, .menu-item, .dropdown a, .contact a, main, .copyright, .info a
-		outline: $s3 solid $primary
-		outline-offset: calc(-#{$s3} / 2)
-		padding: $s12 $s24
-		box-shadow: $s8 $s8 0 0 $primary
+	%interactive
+		@include boxMedium
 	main
-		padding: $s24
 		gap: $s24
+		@include boxMedium
 	footer
 		grid-template-areas: "copyright info"
 		justify-content: space-between
@@ -158,11 +154,10 @@ footer
 	body
 		padding: $s32
 		gap: $s32
-	.menu-item
-		width: 190px
-	.logo a, .menu-item, .dropdown a, .contact a, main, .copyright, .info a
+	%interactive
 		padding: $s12 $s32
-		box-shadow: $s12 $s12 0 0 $primary
+		@include boxMedium
 	main
 		padding: $s32
 		gap: $s32
+		@include boxMedium

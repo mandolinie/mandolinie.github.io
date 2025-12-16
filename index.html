@@ -32,36 +32,32 @@
       <div id="cookiesModal">
         <p>This page collects anonymized usage data. Read more under <a href="privacy">privacy</a>.</p>
         <div id="cookiesActions">
-          <div id="cookiesAcceptButton">Accept</div>
-          <div id="cookiesDeclineButton">Decline</div>
+          <button id="cookiesAcceptButton">Accept</button>
+          <button id="cookiesDeclineButton">Decline</button>
         </div>
       </div>
     </div>
-    <header>
-      <div class="logo"><a href="/">Manuel Blex</a></div>
-      <div class="menu">
-        <div class="menu-item">Work
-          <div class="dropdown"><a href="https://de.linkedin.com/in/manuel-blex" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a href="https://www.xing.com/profile/manuel_blex" target="_blank" rel="noopener noreferrer">XING</a>
-<a href="https://be.net/manuelblex" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    <header><a class="logo" href="/" aria-label="Logo">Manuel Blex</a>
+      <nav aria-label="Main navigation">
+        <div class="menu" role="menubar">
+          <div class="menu-item">
+            <button class="menu-button" aria-haspopup="true" aria-expanded="false">Work</button>
+            <div class="dropdown" role="menu"><a role="menuitem" href="https://de.linkedin.com/in/manuel-blex" target="_blank" rel="noopener noreferrer">LinkedIn</a><a role="menuitem" href="https://www.xing.com/profile/manuel_blex" target="_blank" rel="noopener noreferrer">XING</a><a role="menuitem" href="https://be.net/manuelblex" target="_blank" rel="noopener noreferrer">Portfolio</a></div>
+          </div>
+          <div class="menu-item">
+            <button class="menu-button" aria-haspopup="true" aria-expanded="false">Music</button>
+            <div class="dropdown" role="menu"><a role="menuitem" href="https://www.cngrts.com" target="_blank" rel="noopener noreferrer">CNGRTS</a><a role="menuitem" href="https://soundcloud.com/per-pedes" target="_blank" rel="noopener noreferrer">Per Pedes</a><a role="menuitem" href="https://soundcloud.com/myheartbits" target="_blank" rel="noopener noreferrer">myheartbits</a></div>
+          </div>
+          <div class="menu-item">
+            <button class="menu-button" aria-haspopup="true" aria-expanded="false">Creative</button>
+            <div class="dropdown" role="menu"><a role="menuitem" href="https://mandolinie.creator-spring.com/" target="_blank" rel="noopener noreferrer">Shop <span>New!</span></a><a role="menuitem" href="https://medium.com/@manuelblex" target="_blank" rel="noopener noreferrer">Medium</a><a role="menuitem" href="https://dribbble.com/Mandolinie" target="_blank" rel="noopener noreferrer">Dribbble</a><a role="menuitem" href="https://codepen.io/mandolinie" target="_blank" rel="noopener noreferrer">CodePen</a><a role="menuitem" href="https://github.com/mandolinie" target="_blank" rel="noopener noreferrer">GitHub</a></div>
+          </div>
+          <div class="menu-item">
+            <button class="menu-button" aria-haspopup="true" aria-expanded="false">Projects</button>
+            <div class="dropdown" role="menu"><a role="menuitem" href="https://mandolinie.github.io/tabsonfire" target="_blank" rel="noopener noreferrer">TabsOnFire</a></div>
           </div>
         </div>
-        <div class="menu-item">Music
-          <div class="dropdown"><a href="https://www.cngrts.com" target="_blank" rel="noopener noreferrer">CNGRTS</a>
-<a href="https://soundcloud.com/per-pedes" target="_blank" rel="noopener noreferrer">Per Pedes</a>
-<a href="https://soundcloud.com/myheartbits" target="_blank" rel="noopener noreferrer">myheartbits</a>
-          </div>
-        </div>
-        <div class="menu-item">Design/Code
-          <div class="dropdown"><a href="https://mandolinie.creator-spring.com/" target="_blank" rel="noopener noreferrer">Shop <span>New!</span></a>
-<a href="https://medium.com/@manuelblex" target="_blank" rel="noopener noreferrer">Medium</a>
-<a href="https://dribbble.com/Mandolinie" target="_blank" rel="noopener noreferrer">Dribbble</a>
-<a href="https://codepen.io/mandolinie" target="_blank" rel="noopeer noreferrer">CodePen</a>
-<a href="https://github.com/mandolinie" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
-        </div>
-      </div>
-      <div class="contact"><a href="mailto:mandolinie@proton.me?subject=Contact from mandolinie.github.io">Contact</a></div>
+      </nav><a class="contact" href="mailto:mandolinie@proton.me?subject=Contact from mandolinie.github.io">Contact</a>
     </header>
     <main class="col">
       <section>
@@ -73,9 +69,7 @@
     </main>
     <footer>
       <div class="copyright">© <span id="year">2025</span> All rights reserved</div>
-      <div class="info"><a href="/legal">Legal</a>
-<a href="/privacy">Privacy</a>
-      </div>
+      <div class="info"><a href="/legal">Legal</a><a href="/privacy">Privacy</a></div>
     </footer>
     <script type="text/javascript" src="js/functions-min.js"></script>
   </body>

@@ -25,3 +25,27 @@ $s64: 4rem
     background-image: radial-gradient(circle at center, $primary $dotSize, transparent 0), radial-gradient(circle at center, $primary $dotSize, transparent 0)
     background-size: $bgSize $bgSize
     background-position: 0 0, $bgPosition $bgPosition
+
+header a,
+.menu-button,
+.dropdown a,
+footer a,
+.copyright,
+#cookiesAcceptButton,
+#cookiesDeclineButton
+    @extend %interactive
+
+@mixin boxSmall
+    outline: $s2 solid $primary
+    outline-offset: calc(-#{$s2} / 2)
+    background-color: $secondary
+    box-shadow: $s6 $s6 0 0 $primary
+
+@mixin boxMedium
+    outline: $s3 solid $primary
+    outline-offset: calc(-#{$s3} / 2)
+    background-color: $secondary
+    box-shadow: $s8 $s8 0 0 $primary
+
+@mixin boxLarge
+    box-shadow: $s12 $s12 0 0 $primary
