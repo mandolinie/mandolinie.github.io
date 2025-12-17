@@ -10,39 +10,43 @@
 
 #cookiesModal
   position: absolute
-  bottom: 0
+  top: 50%
   left: 50%
-  transform: translateX(-50%)
+  transform: translate(-50%, -50%)
   @include boxSmall
   display: flex
   flex-direction: column
   padding: $s24 $s32 $s32
-  gap: $s24
+  gap: $s16
   width: 100%
-  max-width: 560px
+  max-width: 320px
   p
     padding: 0
   a
     display: inline
     &:hover, &:focus-visible
-      background-color: $secondary
-      outline: $s2 solid $secondary
-      color: $primary
+      background-color: $primary
+      outline: $s2 solid $primary
+      color: $secondary
 
 #cookiesActions
   display: flex
-  flex-direction: column
+  flex-direction: row
   button
     width: 100%
 
 @media screen and (min-width: 560px)
-  #cookiesActions
-    flex-direction: row
+//
 
 @media screen and (min-width: 768px)
+  #cookiesModal
+    max-width: 420px
   #cookiesModal
     @include boxMedium
 
 @media screen and (min-width: 1024px)
   #cookiesModal
+    max-width: 560px
+    gap: $s24
+    padding: $s32 $s40 $s40
     @include boxLarge

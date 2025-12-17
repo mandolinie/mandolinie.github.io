@@ -272,7 +272,7 @@ footer a,
 	        appearance: none;
 	border: none;
 	display: block;
-	padding: 0.5rem 1rem;
+	padding: 0.75rem 1rem;
 	outline: 0.125rem solid var(--primary);
 	outline-offset: calc(-0.125rem / 2);
 	background-color: var(--secondary);
@@ -282,6 +282,7 @@ footer a,
 	color: inherit;
 	text-decoration: none;
 	text-align: left;
+	line-height: 1;
 	cursor: pointer;
 }
 header a:hover,
@@ -437,17 +438,11 @@ footer {
 	.copyright,
 	#cookiesAcceptButton,
 	#cookiesDeclineButton {
-		outline: 0.1875rem solid var(--primary);
-		outline-offset: calc(-0.1875rem / 2);
-		background-color: var(--secondary);
 		-webkit-box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
 		        box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
 	}
 	main {
 		gap: 1.5rem;
-		outline: 0.1875rem solid var(--primary);
-		outline-offset: calc(-0.1875rem / 2);
-		background-color: var(--secondary);
 		-webkit-box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
 		        box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
 	}
@@ -494,18 +489,16 @@ footer {
 		padding: 0.75rem 2rem;
 		outline: 0.1875rem solid var(--primary);
 		outline-offset: calc(-0.1875rem / 2);
-		background-color: var(--secondary);
-		-webkit-box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
-		        box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
+		-webkit-box-shadow: 0.625rem 0.625rem 0 0 var(--primary);
+		        box-shadow: 0.625rem 0.625rem 0 0 var(--primary);
 	}
 	main {
 		padding: 2rem;
 		gap: 2rem;
 		outline: 0.1875rem solid var(--primary);
 		outline-offset: calc(-0.1875rem / 2);
-		background-color: var(--secondary);
-		-webkit-box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
-		        box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
+		-webkit-box-shadow: 0.625rem 0.625rem 0 0 var(--primary);
+		        box-shadow: 0.625rem 0.625rem 0 0 var(--primary);
 	}
 }
 #cookies {
@@ -521,10 +514,10 @@ footer {
 
 #cookiesModal {
 	position: absolute;
-	bottom: 0;
+	top: 50%;
 	left: 50%;
-	-webkit-transform: translateX(-50%);
-	        transform: translateX(-50%);
+	-webkit-transform: translate(-50%, -50%);
+	        transform: translate(-50%, -50%);
 	outline: 0.125rem solid var(--primary);
 	outline-offset: calc(-0.125rem / 2);
 	background-color: var(--secondary);
@@ -538,9 +531,9 @@ footer {
 	    -ms-flex-direction: column;
 	        flex-direction: column;
 	padding: 1.5rem 2rem 2rem;
-	gap: 1.5rem;
+	gap: 1rem;
 	width: 100%;
-	max-width: 560px;
+	max-width: 320px;
 }
 #cookiesModal p {
 	padding: 0;
@@ -549,44 +542,41 @@ footer {
 	display: inline;
 }
 #cookiesModal a:hover, #cookiesModal a:focus-visible {
-	background-color: var(--secondary);
-	outline: 0.125rem solid var(--secondary);
-	color: var(--primary);
+	background-color: var(--primary);
+	outline: 0.125rem solid var(--primary);
+	color: var(--secondary);
 }
 
 #cookiesActions {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-orient: vertical;
+	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
-	    -ms-flex-direction: column;
-	        flex-direction: column;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
 }
 #cookiesActions button {
 	width: 100%;
 }
 
-@media screen and (min-width: 560px) {
-	#cookiesActions {
-		-webkit-box-orient: horizontal;
-		-webkit-box-direction: normal;
-		    -ms-flex-direction: row;
-		        flex-direction: row;
-	}
-}
 @media screen and (min-width: 768px) {
 	#cookiesModal {
-		outline: 0.1875rem solid var(--primary);
-		outline-offset: calc(-0.1875rem / 2);
-		background-color: var(--secondary);
+		max-width: 420px;
+	}
+	#cookiesModal {
 		-webkit-box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
 		        box-shadow: 0.5rem 0.5rem 0 0 var(--primary);
 	}
 }
 @media screen and (min-width: 1024px) {
 	#cookiesModal {
-		-webkit-box-shadow: 0.75rem 0.75rem 0 0 var(--primary);
-		        box-shadow: 0.75rem 0.75rem 0 0 var(--primary);
+		max-width: 560px;
+		gap: 1.5rem;
+		padding: 2rem 2.5rem 2.5rem;
+		outline: 0.1875rem solid var(--primary);
+		outline-offset: calc(-0.1875rem / 2);
+		-webkit-box-shadow: 0.625rem 0.625rem 0 0 var(--primary);
+		        box-shadow: 0.625rem 0.625rem 0 0 var(--primary);
 	}
 }

@@ -7,6 +7,7 @@ $s3: .1875rem
 $s4: .25rem
 $s6: .375rem
 $s8: .5rem
+$s10: .625rem
 $s12: .75rem
 $s16: 1rem
 $s18: 1.125rem
@@ -42,10 +43,9 @@ footer a,
     box-shadow: $s6 $s6 0 0 $primary
 
 @mixin boxMedium
-    outline: $s3 solid $primary
-    outline-offset: calc(-#{$s3} / 2)
-    background-color: $secondary
     box-shadow: $s8 $s8 0 0 $primary
 
 @mixin boxLarge
-    box-shadow: $s12 $s12 0 0 $primary
+    outline: $s3 solid $primary
+    outline-offset: calc(-#{$s3} / 2)
+    box-shadow: $s10 $s10 0 0 $primary
