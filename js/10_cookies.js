@@ -24,7 +24,7 @@ function initCookies() {
     };
 
     gtag('js', new Date());
-    gtag('config', GA_ID, { anonymize_ip: true });
+    gtag('config', GA_ID, { cookie_domain: 'mandolinie.github.io' });
   }
 
   // Single source of truth for changing decision
